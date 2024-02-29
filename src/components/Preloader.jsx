@@ -17,7 +17,7 @@ const Preloader = ({ startGame, setStartGame }) => {
 			<Tilt
 				className='preloader__tilt'
 				glareEnable={true}
-				glareMaxOpacity={0.6}
+				glareMaxOpacity={0.4}
 				glareColor="#ffffff"
 				glarePosition="bottom"
 				glareBorderRadius="50%"
@@ -27,7 +27,7 @@ const Preloader = ({ startGame, setStartGame }) => {
 					<img src={logoJPG} alt="teenage mutant ninja turtles logo" />
 				</picture>
 			</Tilt>
-			<h2 className='preloader__subTitle'>Choose Game Difficulty</h2>
+			<h2 className='preloader__subTitle gradient-text'>Choose Game Difficulty</h2>
 			<div className='preloader__buttonBox'>
 				<button className='preloader__button' onClick={() => handleClick(4)}>Easy</button>
 				<button className='preloader__button' onClick={() => handleClick(8)}>Medium</button>

@@ -1,23 +1,43 @@
 @import url(https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900);
 
-.cerd__tilt {
+.card__tilt {
 	width: 23%;
 	margin-bottom: 25px;
 }
 
 .card {
 	position: relative;
-	padding-bottom: 1.5rem;
+	padding: 1.5rem 0;
 	background-color: #242424;
-	border: 2px solid #096532;
+	/* border: 2px solid #096532; */
 	border-radius: 15px;
-	transition: 1s;
+	perspective: 500px;
+	transform-style: preserve-3d;
+	transition: 1.5s;
 	cursor: pointer;
 }
 
-.card:hover {
+/* .card:hover {
 	border: 2px solid #fff;
 	box-shadow: 0 0 2rem #096532;
+} */
+
+.card.flipped {
+	transform: rotateY(180deg);
+}
+
+.cardFace,
+.cardBack {
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+.cardBack {
+	transform: rotateY(180deg);
+	background-color: #242424;
+	background-image: url('../assets/logos/memory-game-logo.png');
+	background-size: cover;
+	background-position: center center;
 }
 
 .card__bg {
@@ -28,19 +48,28 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top 20%;
-	border: 2px solid #096532;
+	/* border: 2px solid #096532; */
 	border-radius: 12px;
 	margin-bottom: 1rem;
-	transition: 500ms;
+	transition: 1s;
 }
 
-.card:hover>.card__bg {
+/* .card:hover .card__bg {
 	border: 2px solid #fff;
-}
+} */
 
 .card__img {
 	width: 100%;
 	transition: 1000ms;
+}
+
+.card__img.clicked {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: scale(2);
+	opacity: 0;
+	transition: all 650ms;
 }
 
 .card__text {
@@ -52,6 +81,6 @@
 	transition: color 1s;
 }
 
-.card:hover>.card__text {
+.card:hover .card__text {
 	color: #fff;
 }

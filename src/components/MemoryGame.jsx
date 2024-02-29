@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
 import HEROESLIST from '../herosList';
@@ -6,6 +6,7 @@ import '../styles/MemoryGame.css'
 
 function MemoryGame({ startGame }) {
 	const [cards, setCards] = useState([]);
+	const [flippedCards, setFlippedCards] = useState([]);
 	const [selectedCards, setSelectedCards] = useState([]);
 
 	const handleCardClick = (id) => {
@@ -18,9 +19,27 @@ function MemoryGame({ startGame }) {
 		if (selectedCards.length === 1) {
 			alert("Вы победили");
 		}
+		flipAllCards();
 	}
 
-	// Создаем новый набор карт на основе start
+	const flipAllCards = () => {
+		setFlippedCards(cards.map(card => card.id));
+		setTimeout(() => {
+			setFlippedCards([]);
+			setCards(shuffleArray(cards));
+		}, 1000);
+	}
+
+	const shuffleArray = (array) => {
+		let currentIndex = array.length, randomIndex;
+		while (currentIndex !== 0) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex--;
+			[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+		}
+		return array;
+	}
+
 	const createNewSetOfCards = () => {
 		let newCards = [];
 		while (newCards.length < startGame) {
@@ -34,8 +53,7 @@ function MemoryGame({ startGame }) {
 		setSelectedCards(newCards.map(card => card.id));
 	}
 
-	// Создаем новый набор карт при изменении start
-	useState(() => {
+	useEffect(() => {
 		createNewSetOfCards();
 	}, [startGame]);
 
@@ -45,7 +63,8 @@ function MemoryGame({ startGame }) {
 				<Card
 					key={card.id}
 					hero={card}
-					onClick={() => handleCardClick(card.id)} />
+					onClick={() => handleCardClick(card.id)}
+					flipped={flippedCards.includes(card.id)} />
 			))}
 		</div>
 	);

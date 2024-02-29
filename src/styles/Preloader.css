@@ -8,17 +8,21 @@
 }
 
 .preloader__title,
-.preloader__subtitle {
+.preloader__subTitle {
+	background: linear-gradient(90deg, #EBB35A, #096532, #EBB35A);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-position: 100%;
 	font-family: 'Orbitron', serif;
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 900;
-	color: #fff;
+	color: #FFF;
 	text-transform: uppercase;
 	cursor: default;
 }
 
 .preloader__tilt {
-	width: 35%;
+	width: 40%;
 }
 
 .preloader__imgbox {
@@ -30,30 +34,31 @@
 	height: 100%;
 	border-radius: 50%;
 	transition: 300ms;
+	perspective: 1000px;
 }
 
 .preloader__subTitle {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 .preloader__buttonBox {
-	width: 50%;
+	width: 60%;
 	display: flex;
 	justify-content: space-between;
 }
 
 .preloader__button {
-	width: 8rem;
-	height: 2rem;
+	width: 10rem;
+	height: 3rem;
 	background-color: #096532;
 	border-top: 3px solid #444;
 	border-left: 3px solid #444;
 	border-bottom: 3px solid #222;
 	border-right: 3px solid #222;
 	border-radius: 1rem;
-	color: #fff;
+	color: #EBB35A;
 	font-family: 'Orbitron', serif;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 	transition: 300ms;
 	cursor: pointer;
@@ -68,15 +73,4 @@
 
 .preloader__button:hover {
 	box-shadow: 0 0 1.5rem #EBB35A;
-}
-
-.gradient-text {
-	background: linear-gradient(90deg, #EBB35A, #096532, #EBB35A);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	transition: background-position 2s;
-}
-
-.gradient-text:hover {
-	background-position: 100%;
 }

@@ -6,11 +6,12 @@
 }
 
 .card {
+	position: relative;
 	padding-bottom: 1.5rem;
 	background-color: #242424;
 	border: 2px solid #096532;
 	border-radius: 15px;
-	transition: 500ms;
+	transition: 1s;
 	cursor: pointer;
 }
 
@@ -20,8 +21,10 @@
 }
 
 .card__bg {
-	margin: 1.5rem;
-	/* width: 100%; */
+	width: 86%;
+	aspect-ratio: 1/1.03;
+	position: relative;
+	margin: 1.5rem auto;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top 20%;
@@ -37,6 +40,7 @@
 
 .card__img {
 	width: 100%;
+	transition: 1000ms;
 }
 
 .card__text {

@@ -14,6 +14,7 @@
 	font-weight: 900;
 	color: #fff;
 	text-transform: uppercase;
+	cursor: default;
 }
 
 .preloader__tilt {
@@ -66,5 +67,16 @@
 }
 
 .preloader__button:hover {
-	box-shadow: 0 0 1rem #096532;
+	box-shadow: 0 0 1.5rem #EBB35A;
+}
+
+.gradient-text {
+	background: linear-gradient(90deg, #EBB35A, #096532, #EBB35A);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: background-position 2s;
+}
+
+.gradient-text:hover {
+	background-position: 100%;
 }

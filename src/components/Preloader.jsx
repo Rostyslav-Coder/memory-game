@@ -12,8 +12,8 @@ const Preloader = ({ startGame, setStartGame }) => {
 
 	return (
 		<div className="preloader">
-			<h1 className='preloader__title'>TEENAGE MUTANT NINJA TURTLES</h1>
-			<h1 className='preloader__title'>MEMORY GAME</h1>
+			<h1 className='preloader__title gradient-text'>TEENAGE MUTANT NINJA TURTLES</h1>
+			<h1 className='preloader__title gradient-text'>MEMORY GAME</h1>
 			<Tilt
 				className='preloader__tilt'
 				glareEnable={true}

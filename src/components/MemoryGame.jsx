@@ -7,7 +7,7 @@ import GameOverModal from './GameOverModal';
 import HEROESLIST from '../herosList';
 import '../styles/MemoryGame.css';
 
-function MemoryGame({ startGame, setStartGame, setCount }) {
+function MemoryGame({ startGame, setStartGame, setCount, setWins }) {
 
 	const [cards, setCards] = useState([]);
 	const [flippedCards, setFlippedCards] = useState([]);
@@ -24,10 +24,12 @@ function MemoryGame({ startGame, setStartGame, setCount }) {
 			setGameOver(true);
 			setIsWin(false);
 			setSelectedCards(cards.map(card => card.id));
+			setWins(0);
 		}
 		if (selectedCards.length === 1) {
 			setGameOver(true);
 			setIsWin(true);
+			setWins(wins => wins + 1);
 		}
 
 		flipAllCards();
@@ -82,7 +84,7 @@ function MemoryGame({ startGame, setStartGame, setCount }) {
 	return (
 		<div className='memoryGame'>
 			{gameOver ? (
-				<GameOverModal startGame={startGame} setStartGame={setStartGame} isWin={isWin} setIsWin={setIsWin} />
+				<GameOverModal startGame={startGame} setStartGame={setStartGame} isWin={isWin} setIsWin={setIsWin} setCount={setCount} />
 			) : (
 				cards.map(card => (
 					<Card
@@ -100,6 +102,7 @@ MemoryGame.propTypes = {
 	startGame: PropTypes.number.isRequired,
 	setStartGame: PropTypes.func.isRequired,
 	setCount: PropTypes.func.isRequired,
+	setWins: PropTypes.func.isRequired,
 };
 
 export default MemoryGame;

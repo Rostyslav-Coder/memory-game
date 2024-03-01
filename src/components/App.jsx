@@ -9,14 +9,15 @@ import '../styles/App.css';
 const App = () => {
 	const [startGame, setStartGame] = useState(0);
 	const [count, setCount] = useState(0);
+	const [wins, setWins] = useState(0);
 
 	if (startGame === 0) {
 		return <Preloader startGame={startGame} setStartGame={setStartGame} />
 	}
 	return (
 		<>
-			<Header count={count} />
-			<MemoryGame startGame={startGame} setStartGame={setStartGame} setCount={setCount} />
+			<Header count={count} wins={wins} />
+			<MemoryGame startGame={startGame} setStartGame={setStartGame} setCount={setCount} setWins={setWins} />
 		</>
 	)
 };

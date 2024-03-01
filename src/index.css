@@ -1,10 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900);
 
 :root {
-	font-family: Poppins, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Orbitron, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
-	font-weight: 400;
+	font-weight: 900;
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);

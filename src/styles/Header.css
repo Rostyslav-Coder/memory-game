@@ -1,0 +1,26 @@
+/* Header Component Styles */
+
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0 5%;
+	height: 5rem;
+	background-color: #242424aa;
+	backdrop-filter: blur(3px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+}
+
+.header__logo {
+	width: 4.5rem;
+}
+
+.header__count {
+	font-family: 'Orbitron', serif;
+	font-size: 1.5rem;
+	font-weight: 900;
+	color: #096532;
+}

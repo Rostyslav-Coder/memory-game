@@ -1,3 +1,5 @@
+// Card Component Module
+
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Tilt from 'react-parallax-tilt';

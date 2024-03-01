@@ -1,6 +1,8 @@
+/* MemoryGame Component Styles */
+
 .memoryGame {
 	width: 90%;
-	margin: 0 auto;
+	margin: 4rem auto 0;
 	padding: 5% 0;
 	display: flex;
 	justify-content: space-between;

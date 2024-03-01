@@ -1,3 +1,5 @@
+/* Card Component Styles */
+
 @import url(https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900);
 
 .card__tilt {
@@ -6,21 +8,14 @@
 }
 
 .card {
-	position: relative;
 	padding: 1.5rem 0;
 	background-color: #242424;
-	/* border: 2px solid #096532; */
 	border-radius: 15px;
 	perspective: 500px;
 	transform-style: preserve-3d;
 	transition: 1.5s;
 	cursor: pointer;
 }
-
-/* .card:hover {
-	border: 2px solid #fff;
-	box-shadow: 0 0 2rem #096532;
-} */
 
 .card.flipped {
 	transform: rotateY(180deg);
@@ -42,25 +37,20 @@
 
 .card__bg {
 	width: 86%;
-	aspect-ratio: 1/1.03;
+	aspect-ratio: 1/1;
 	position: relative;
-	margin: 1.5rem auto;
+	margin: 0 auto 1.5rem;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top 20%;
-	/* border: 2px solid #096532; */
 	border-radius: 12px;
 	margin-bottom: 1rem;
-	transition: 1s;
 }
-
-/* .card:hover .card__bg {
-	border: 2px solid #fff;
-} */
 
 .card__img {
 	width: 100%;
-	transition: 1000ms;
+	height: 100%;
+	margin-top: auto;
 }
 
 .card__img.clicked {

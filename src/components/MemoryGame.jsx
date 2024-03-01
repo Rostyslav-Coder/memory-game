@@ -1,15 +1,19 @@
+// MemoryGame Component Module
+
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
 import HEROESLIST from '../herosList';
 import '../styles/MemoryGame.css'
 
-function MemoryGame({ startGame }) {
+function MemoryGame({ startGame, setCount }) {
 	const [cards, setCards] = useState([]);
 	const [flippedCards, setFlippedCards] = useState([]);
 	const [selectedCards, setSelectedCards] = useState([]);
 
 	const handleCardClick = (id) => {
+		setCount(count => count + 1);
+
 		if (selectedCards.includes(id)) {
 			setSelectedCards(selectedCards.filter(cardId => cardId !== id));
 		} else {
@@ -57,6 +61,7 @@ function MemoryGame({ startGame }) {
 		createNewSetOfCards();
 	}, [startGame]);
 
+
 	return (
 		<div className='memoryGame'>
 			{cards.map(card => (
@@ -72,6 +77,7 @@ function MemoryGame({ startGame }) {
 
 MemoryGame.propTypes = {
 	startGame: PropTypes.number.isRequired,
+	setCount: PropTypes.number.isRequired,
 }
 
 export default MemoryGame;

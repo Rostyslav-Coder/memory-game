@@ -31,16 +31,7 @@ const Preloader = ({ startGame, setStartGame }) => {
 			</Tilt>
 			<h2 className='preloader__subTitle gradient-text'>Choose Game Difficulty</h2>
 			<div className='preloader__buttonBox'>
-				<div className="turtle">
-					<button className='preloader__button' onClick={() => handleClick(4)}>Easy
-						<div className="limb limb1"></div>
-						<div className="limb limb2"></div>
-						<div className="limb limb3"></div>
-						<div className="limb limb4"></div>
-						<div className="head"></div>
-						<div className="tail"></div>
-					</button>
-				</div>
+				<button className='preloader__button' onClick={() => handleClick(4)}>Easy</button>
 				<button className='preloader__button' onClick={() => handleClick(8)}>Medium</button>
 				<button className='preloader__button' onClick={() => handleClick(12)}>Hard</button>
 			</div>

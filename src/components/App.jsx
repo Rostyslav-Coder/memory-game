@@ -16,14 +16,9 @@ const App = () => {
 	return (
 		<>
 			<Header count={count} />
-			<MemoryGame startGame={startGame} count={count} setCount={setCount} />
+			<MemoryGame startGame={startGame} setStartGame={setStartGame} setCount={setCount} />
 		</>
 	)
 };
-
-// App.propTypes = {
-// 	startGame: PropTypes.number.isRequired,
-// 	setStartGame: PropTypes.func.isRequired,
-// };
 
 export default App;

@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Header from './Header';
 import MemoryGame from './MemoryGame';
 import Preloader from './Preloader';
-import '../styles/App.css';
 
 const App = () => {
 	const [startGame, setStartGame] = useState(0);

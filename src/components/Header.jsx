@@ -8,8 +8,10 @@ const Header = ({ count, wins }) => {
 	return (
 		<div className="header">
 			<img src={logoPNG} alt="Memory Game Logo" className='header__logo' />
-			<p className='header__count'>Steps Taken : {count}</p>
-			<p className='header__count'>Consecutive wins : {wins}</p>
+			<div className="header__counterBox">
+				<p className='header__count'>Steps Taken : {count}</p>
+				<p className='header__count'>Consecutive wins : {wins}</p>
+			</div>
 		</div>
 	);
 };

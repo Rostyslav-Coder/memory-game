@@ -1,9 +1,11 @@
+/* GameOverModal Component Styles */
+
 .gameOverModal {
-	width: 80%;
-	height: 70vh;
+	width: 100%;
+	height: 80vh;
 	position: relative;
 	margin: 0 auto;
-	padding: 2rem 0;
+	padding: 2rem 0.5rem;
 	background-size: cover;
 	background-position: center bottom 25%;
 	border: 2px solid #096532;
@@ -15,20 +17,14 @@
 }
 
 .gameOverModal__title {
-	background: linear-gradient(90deg, #1C33FF, #F83030, #C934FF, #EBB35A);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-position: 100%;
+	color: #FFF;
 	font-size: 3rem;
 	text-transform: uppercase;
 	z-index: 5;
 }
 
 .gameOverModal__subTitle {
-	background: linear-gradient(90deg, #1C33FF, #F83030, #C934FF, #EBB35A);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-position: 100%;
+	color: #fff;
 	font-size: 2rem;
 	text-transform: uppercase;
 	z-index: 5;
@@ -36,8 +32,8 @@
 
 .gameOverModal__hero {
 	position: absolute;
-	height: 50%;
-	top: 5%;
+	height: 25%;
+	top: 35%;
 	left: 5%;
 	opacity: 0;
 	z-index: 2;
@@ -45,32 +41,32 @@
 
 .gameOverModal__antiHero {
 	position: absolute;
-	height: 90%;
+	height: 50%;
 	bottom: 0;
 	opacity: 0;
-	z-index: 3;
+	z-index: 4;
 }
 
 .gameOverModal__antiHero1 {
 	position: absolute;
 	height: 55%;
 	bottom: 0;
-	left: 5%;
+	left: -30%;
 	opacity: 0;
-	z-index: 2;
+	z-index: 3;
 }
 
 .gameOverModal__antiHero2 {
 	position: absolute;
 	height: 65%;
 	bottom: 0;
-	right: 5%;
+	right: -30%;
 	opacity: 0;
 	z-index: 2;
 }
 
 .gameOverModal__buttonBox {
-	width: 50%;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -79,22 +75,20 @@
 
 .gameOverModal__button {
 	width: 7rem;
-	height: 4rem;
-	position: relative;
-	background-color: #096532;
-	background-image: url(../assets/backgrounds/turtle-button.jpg);
+	height: 3.5rem;
+	background-color: #EBB35A;
 	background-size: 100% 100%;
 	background-position: center 36%;
 	border-top: 3px solid #444;
 	border-left: 3px solid #444;
 	border-bottom: 3px solid #222;
 	border-right: 3px solid #222;
-	border-radius: 40%;
+	border-radius: 2rem;
 	color: #FFF;
 	font-family: 'Orbitron', serif;
 	font-size: 1.25rem;
 	font-weight: 900;
-	transition: 300ms;
+	transition: 500ms;
 	cursor: pointer;
 	z-index: 5;
 }
@@ -106,7 +100,76 @@
 	border-right: 2px solid #333;
 }
 
-.gameOverModal__button:hover {
-	color: #EBB35A;
-	box-shadow: 0 0 1rem #EBB35A;
+@media screen and (orientation: landscape) {
+	.gameOverModal {
+		height: 70vh;
+	}
+
+	.gameOverModal__title {
+		font-size: 2rem;
+	}
+
+	.gameOverModal__subTitle {
+		font-size: 1.5rem;
+	}
+
+	.gameOverModal__hero {
+		height: 50%;
+		top: 0;
+		left: 5%;
+	}
+
+	.gameOverModal__antiHero {
+		height: 90%;
+	}
+
+	.gameOverModal__antiHero1 {
+		height: 65%;
+		left: 10%;
+	}
+
+	.gameOverModal__antiHero2 {
+		height: 75%;
+		right: 10%;
+	}
+
+	.gameOverModal__buttonBox {
+		width: 70%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.gameOverModal {
+		width: 80%;
+		height: 70vh;
+		padding: 2rem 0;
+	}
+
+	.gameOverModal__hero {
+		height: 50%;
+		top: 5%;
+	}
+
+	.gameOverModal__antiHero1 {
+		height: 55%;
+		left: 5%;
+	}
+
+	.gameOverModal__antiHero2 {
+		right: 5%;
+	}
+
+	.gameOverModal__buttonBox {
+		width: 50%;
+	}
+
+	.gameOverModal__button {
+		height: 4rem;
+	}
+
+	.gameOverModal__button:hover {
+		background-image: url(../assets/backgrounds/turtle-button.jpg);
+		color: #EBB35A;
+		box-shadow: 0 0 1rem #EBB35A;
+	}
 }

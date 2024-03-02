@@ -18,9 +18,30 @@
 	width: 4.5rem;
 }
 
+.header__counterBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
 .header__count {
-	font-family: 'Orbitron', serif;
 	font-size: 1.5rem;
 	font-weight: 900;
-	color: #096532;
+}
+
+@media screen and (orientation: landscape) {
+	.header {
+		height: 4rem;
+	}
+
+	.header__logo {
+		width: 3.7rem;
+	}
+
+	.header__counterBox {
+		width: 70%;
+		flex-direction: row;
+		align-items: center;
+	}
 }

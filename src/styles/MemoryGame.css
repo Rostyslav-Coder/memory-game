@@ -2,10 +2,16 @@
 
 .memoryGame {
 	width: 90%;
-	margin: 4rem auto 0;
+	margin: 4rem auto;
 	padding: 5% 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+@media screen and (orientation: landscape) {
+	.memoryGame {
+		margin: 3rem auto 0;
+	}
 }

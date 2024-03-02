@@ -24,6 +24,7 @@
 
 .preloader__tilt {
 	width: 90%;
+	z-index: 2;
 }
 
 .preloader__imgbox {
@@ -36,6 +37,7 @@
 	border-radius: 50%;
 	transition: 300ms;
 	perspective: 1000px;
+	z-index: 3;
 }
 
 .preloader__subTitle {

@@ -3,6 +3,7 @@
 .card__tilt {
 	width: 45%;
 	margin-bottom: 25px;
+	z-index: 2;
 }
 
 .card {
@@ -12,6 +13,7 @@
 	perspective: 500px;
 	transform-style: preserve-3d;
 	transition: 1.5s;
+	z-index: 3;
 }
 
 .card.flipped {
@@ -62,6 +64,7 @@
 	font-size: 1.1rem;
 	text-transform: uppercase;
 	transition: color 1s;
+	z-index: 4;
 }
 
 @media screen and (orientation: landscape) {

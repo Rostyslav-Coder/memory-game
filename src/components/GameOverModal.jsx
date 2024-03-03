@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import winnerBg from '../assets/backgrounds/winner-bg.jpg';
 import loserBg from '../assets/backgrounds/loser-bg.jpg';
-import winnerHero from '../assets/heroes/winner-hero.png';
-import loserHero from '../assets/heroes/loser-hero.png';
-import loserHero1 from '../assets/heroes/bebop-img.png';
-import loserHero2 from '../assets/heroes/rocksteady-img.png';
+import winnerHero from '../assets/heroes/winner-hero.webp';
+import loserHero from '../assets/heroes/anti-hero.webp';
+import loserHero1 from '../assets/heroes/bebop-img.webp';
+import loserHero2 from '../assets/heroes/rocksteady-img.webp';
 import '../styles/GameOverModal.css';
 
 const GameOverModal = ({ startGame, setStartGame, isWin, setIsWin, setCount }) => {

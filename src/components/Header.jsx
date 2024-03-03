@@ -1,13 +1,13 @@
 // Header Component Module
 
 import PropTypes from 'prop-types';
-import logoPNG from '../assets/logos/memory-game-logo.png';
+import logoWEBP from '../assets/logos/memory-game-logo.webp';
 import '../styles/Header.css';
 
 const Header = ({ count, wins }) => {
 	return (
 		<div className="header">
-			<img src={logoPNG} alt="Memory Game Logo" className='header__logo' />
+			<img src={logoWEBP} alt="Memory Game Logo" className='header__logo' />
 			<div className="header__counterBox">
 				<p className='header__count'>Steps Taken : {count}</p>
 				<p className='header__count'>Consecutive wins : {wins}</p>

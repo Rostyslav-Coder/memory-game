@@ -3,7 +3,6 @@
 import PropTypes from 'prop-types';
 import Tilt from 'react-parallax-tilt';
 import logoWEBP from '../assets/logos/memory-game-logo.webp';
-import logoJPG from '../assets/logos/memory-game-logo.png';
 import '../styles/Preloader.css';
 
 const Preloader = ({ startGame, setStartGame }) => {
@@ -24,10 +23,9 @@ const Preloader = ({ startGame, setStartGame }) => {
 				glarePosition="bottom"
 				glareBorderRadius="50%"
 			>
-				<picture className='preloader__imgbox'>
-					<source srcSet={logoWEBP} alt="teenage mutant ninja turtles logo" type='image/webp' />
-					<img src={logoJPG} alt="teenage mutant ninja turtles logo" />
-				</picture>
+				<div className='preloader__imgbox'>
+					<img src={logoWEBP} alt="teenage mutant ninja turtles logo" />
+				</div>
 			</Tilt>
 			<h2 className='preloader__subTitle gradient-text'>Choose Game Difficulty</h2>
 			<div className='preloader__buttonBox'>

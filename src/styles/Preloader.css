@@ -85,7 +85,7 @@
 	}
 
 	.preloader__tilt {
-		width: 32%;
+		width: 45%;
 	}
 
 	.preloader__subTitle {
@@ -109,7 +109,7 @@
 	}
 
 	.preloader__tilt {
-		width: 35%;
+		width: 70%;
 	}
 
 	.preloader__subTitle {
@@ -117,7 +117,7 @@
 	}
 
 	.preloader__buttonBox {
-		width: 60%;
+		width: 100%;
 	}
 
 	.preloader__button {

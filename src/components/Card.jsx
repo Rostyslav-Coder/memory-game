@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Tilt from 'react-parallax-tilt';
-import logoJPG from '../assets/logos/memory-game-logo.png';
+// import logoWEBP from '../assets/logos/memory-game-logo.webp';
 import '../styles/Card.css';
 
 function Card({ hero, onClick, flipped }) {
@@ -30,20 +30,20 @@ function Card({ hero, onClick, flipped }) {
 	return (
 		<Tilt
 			className='card__tilt'
-			glareEnable={true}
-			glareMaxOpacity={0.4}
-			glareColor="#ffffff"
-			glarePosition="bottom"
-			glareBorderRadius="15px"
+			tiltMaxAngleX={22}
+			tiltMaxAngleY={22}
+			transitionSpeed={1000}
+			scale={1}
+			gyroscope={true}
 		>
 			<div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
-				<div className='cardFace'>
-					<div className='card__bg' style={{ backgroundImage: `url(${hero.cardBg})` }} >
-						<img className={`card__img ${isClicked ? 'clicked' : ''}`} src={hero.imageUrl} alt={`${hero.heroName} image`} />
-					</div>
-					<h2 className='card__text'>{hero.heroName}</h2>
+				{/* <div className='cardFace'> */}
+				<div className='card__bg' style={{ backgroundImage: `url(${hero.cardBg})` }} >
+					<img className={`card__img ${isClicked ? 'clicked' : ''}`} src={hero.imageUrl} alt={`${hero.heroName} image`} />
 				</div>
-				<div className='cardBack' style={{ backgroundImage: `url(${logoJPG})` }}></div>
+				<h2 className='card__text'>{hero.heroName}</h2>
+				{/* </div> */}
+				{/* <div className='cardBack' style={{ backgroundImage: `url(${logoWEBP})` }}></div> */}
 			</div>
 		</Tilt>
 	);

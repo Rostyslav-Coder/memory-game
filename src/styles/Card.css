@@ -2,6 +2,8 @@
 
 .card__tilt {
 	width: 45%;
+	transform-style: preserve-3d;
+	transform: perspective(500px);
 	margin-bottom: 25px;
 	z-index: 2;
 }
@@ -10,7 +12,6 @@
 	padding: 1.5rem 0;
 	background-color: #242424;
 	border-radius: 15px;
-	perspective: 500px;
 	transform-style: preserve-3d;
 	transition: 1.5s;
 	z-index: 3;
@@ -20,34 +21,39 @@
 	transform: rotateY(180deg);
 }
 
-.cardFace,
-.cardBack {
-	width: 100%;
-	backface-visibility: hidden;
-}
+/* .cardFace, */
+/* .cardBack { */
+/* width: 100%; */
+/* } */
 
-.cardBack {
-	transform: rotateY(180deg);
-	background-color: #242424;
-	background-image: url('../assets/logos/memory-game-logo.png');
-	background-size: cover;
-	background-position: center center;
-}
+/* .cardBack { */
+/* transform: rotateY(180deg); */
+/* background-color: #242424; */
+/* background-image: url('../../public/images/logos/memory-game-logo.webp'); */
+/* background-size: cover; */
+/* background-position: center center; */
+/* } */
 
 .card__bg {
+	transform-style: preserve-3d;
+	transform: perspective(500px);
 	width: 86%;
 	aspect-ratio: 1/1;
 	overflow: visible;
 	position: relative;
+	perspective: 500px;
 	margin: 0 auto 1.5rem;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center bottom;
 	border-radius: 12px;
 	margin-bottom: 1rem;
+	/* background-color: #242424; */
+	backface-visibility: hidden;
 }
 
 .card__img {
+	transform: translateZ(16px) scale(1.05);
 	width: 100%;
 }
 
@@ -64,6 +70,7 @@
 	font-size: 1.1rem;
 	text-transform: uppercase;
 	transition: color 1s;
+	backface-visibility: hidden;
 	z-index: 4;
 }
 

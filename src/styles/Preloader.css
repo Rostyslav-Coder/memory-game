@@ -24,19 +24,23 @@
 
 .preloader__tilt {
 	width: 90%;
+	aspect-ratio: 1/1;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	background-image: url(../assets/logos/memory-game-logo.webp);
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	z-index: 2;
 }
 
-.preloader__imgbox {
-	width: 100%;
-}
-
-.preloader__imgbox>* {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	transition: 300ms;
-	perspective: 1000px;
+.preloader__img {
+	width: 86%;
+	transform: translateZ(16px) scale(1.05);
+	/* transition: 300ms; */
+	/* perspective: 1000px; */
 	z-index: 3;
 }
 

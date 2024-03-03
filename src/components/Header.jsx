@@ -1,7 +1,7 @@
 // Header Component Module
 
 import PropTypes from 'prop-types';
-import logoWEBP from '../assets/logos/memory-game-logo.webp';
+import logoWEBP from '../assets/logos/logo.webp';
 import '../styles/Header.css';
 
 const Header = ({ count, wins }) => {

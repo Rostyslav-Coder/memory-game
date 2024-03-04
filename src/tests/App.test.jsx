@@ -1,6 +1,7 @@
 // App Component Testing Module
 
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { describe, it, expect } from 'vitest';
 import App from '../components/App';
 
@@ -11,10 +12,12 @@ describe('App', () => {
 		expect(preloaderElement).toBeInTheDocument();
 	});
 
-	it('changes startGame state when a difficulty button is clicked', () => {
+	it('changes startGame state when a difficulty button is clicked', async () => {
+		const user = userEvent.setup();
+
 		render(<App />);
-		const easyButton = screen.getByText('Easy');
-		fireEvent.click(easyButton);
+		const easyButton = screen.getByRole('button', { name: 'Easy' });
+		await user.click(easyButton);
 		const headerElement = screen.getByTestId('header');
 		const memoryGameElement = screen.getByTestId('memoryGame');
 		expect(headerElement).toBeInTheDocument();

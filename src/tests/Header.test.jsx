@@ -9,8 +9,10 @@ describe('Header', () => {
 		const count = 5;
 		const wins = 2;
 		render(<Header count={count} wins={wins} />);
+		const logoElement = await screen.getByRole('img', { name: 'Memory Game Logo' });
 		const countElement = await screen.getByText(`Steps Taken : ${count}`);
 		const winsElement = await screen.getByText(`Consecutive wins : ${wins}`);
+		expect(logoElement).toBeInTheDocument();
 		expect(countElement).toBeInTheDocument();
 		expect(winsElement).toBeInTheDocument();
 	});

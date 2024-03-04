@@ -2,7 +2,7 @@
 
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import Preloader from '../components/Preloader';
 
 describe('Preloader', () => {
@@ -34,5 +34,35 @@ describe('Preloader', () => {
 		const hardButton = await screen.getByRole('button', { name: 'Hard' });
 		await user.click(hardButton);
 		expect(startGame).toBe(12);
+	});
+
+	it('should render a buttons with the text: "Easy", "Medium" & "Hard"', async () => {
+		let startGame = 0;
+		const setStartGame = (value) => { startGame += value };
+		render(<Preloader startGame={startGame} setStartGame={setStartGame} />);
+		const easyButton = await screen.getByRole('button', { name: 'Easy' });
+		const mediumButton = await screen.getByRole('button', { name: 'Medium' });
+		const hardButton = await screen.getByRole('button', { name: 'Hard' });
+		expect(easyButton).toBeInTheDocument();
+		expect(mediumButton).toBeInTheDocument();
+		expect(hardButton).toBeInTheDocument();
+	})
+
+	it('should not call the setStartGame function when it isn`t clicked easy button', async () => {
+		const setStartGame = vi.fn();
+		render(<Preloader onClick={setStartGame} />);
+		expect(setStartGame).not.toHaveBeenCalled();
+	});
+
+	it('should not call the setStartGame function when it isn`t clicked madium button', async () => {
+		const setStartGame = vi.fn();
+		render(<Preloader onClick={setStartGame} />);
+		expect(setStartGame).not.toHaveBeenCalled();
+	});
+
+	it('should not call the setStartGame function when it isn`t clicked hard button', async () => {
+		const setStartGame = vi.fn();
+		render(<Preloader onClick={setStartGame} />);
+		expect(setStartGame).not.toHaveBeenCalled();
 	});
 });

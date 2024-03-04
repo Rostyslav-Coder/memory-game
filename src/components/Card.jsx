@@ -36,14 +36,15 @@ function Card({ hero, onClick, flipped }) {
 			scale={1}
 			gyroscope={true}
 		>
-			<div className={`card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
-				{/* <div className='cardFace'> */}
+			<div
+				className={`card ${isFlipped ? 'flipped' : ''}`}
+				onClick={handleClick}
+				data-testid='Card'
+			>
 				<div className='card__bg' style={{ backgroundImage: `url(${hero.cardBg})` }} >
 					<img className={`card__img ${isClicked ? 'clicked' : ''}`} src={hero.imageUrl} alt={`${hero.heroName} image`} />
 				</div>
 				<h2 className='card__text'>{hero.heroName}</h2>
-				{/* </div> */}
-				{/* <div className='cardBack' style={{ backgroundImage: `url(${logoWEBP})` }}></div> */}
 			</div>
 		</Tilt>
 	);

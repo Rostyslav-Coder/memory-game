@@ -6,9 +6,9 @@ import '../styles/Header.css';
 
 const Header = ({ count, wins }) => {
 	return (
-		<div className="header">
-			<img src={logoWEBP} alt="Memory Game Logo" className='header__logo' />
-			<div className="header__counterBox">
+		<div className='header' data-testid='header'>
+			<img src={logoWEBP} alt='Memory Game Logo' className='header__logo' />
+			<div className='header__counterBox'>
 				<p className='header__count'>Steps Taken : {count}</p>
 				<p className='header__count'>Consecutive wins : {wins}</p>
 			</div>

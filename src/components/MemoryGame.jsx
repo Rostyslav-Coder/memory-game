@@ -82,7 +82,7 @@ function MemoryGame({ startGame, setStartGame, setCount, setWins }) {
 	}, [startGame]);
 
 	return (
-		<div className='memoryGame'>
+		<div className='memoryGame' data-testid='memoryGame'>
 			{gameOver ? (
 				<GameOverModal startGame={startGame} setStartGame={setStartGame} isWin={isWin} setIsWin={setIsWin} setCount={setCount} />
 			) : (
